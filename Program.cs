@@ -73,12 +73,8 @@ namespace Samlingsklasser
 
         static void DiceSortedList()
         {
+            //Jag kopierade allt från DiceDictionary och klistrade in det här för övning 1.
             //Övning 1
-
-        }
-
-        static void DiceDictionary()
-        {
             //Skapa en dictionary med int som nyckel och int som värde
             Dictionary<int, int> resultat = new Dictionary<int, int>();
 
@@ -104,6 +100,40 @@ namespace Samlingsklasser
             {
                 Console.WriteLine("Nyckel: {0} Värde: {1}", kvp.Key, kvp.Value);
             }
+        }
+
+        //Övning 2, Jag skapade en ny static void som heter Övning2.
+        static void Övning2()
+        {
+            //Skapar en lista som heter "övning2" och som har värdet double
+            List<double> övning2 = new List<double>();
+
+            //Raden under är en loop som körs sålänge x är mindre än 1000000000
+            for (int x = 0; x < 1000000000; x++)
+            {
+                //Frågar användaren om värdet på talet som han/hon skall mata in
+                Console.Write("Mata in ett tal:");
+                //Omvandlar svaret från användaren, från string till double
+                double y = double.Parse(Console.ReadLine());
+                //Raderna under säger att om y = 0 så ska den stängas av.
+                if (y == 0)
+                {
+                    
+                    Environment.Exit(1);
+                }
+                //Annars, ifall man sätter in andra värden än 0 då skall programmet innanför else satsen köras
+                else
+                {
+                    //Denna rad gör att talet som blev inmatad av användaren skall lägga till i listan som vi har skapat.
+                    övning2.Add(y);
+                    //Denna rad skriver ut svaret av själva programmet. Programmet skall skriva ut medelvärdet av talen i listan. 
+                    Console.WriteLine("Medelvärde:" + övning2.Average());
+                }
+            }
+        }
+        static void DiceDictionary()
+        {
+            
 
         }
 
