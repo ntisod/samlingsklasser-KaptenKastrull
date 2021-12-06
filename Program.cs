@@ -82,17 +82,17 @@ namespace Samlingsklasser
             Random random = new Random();
 
             //Gör tusen upprepnigar
-            for (int i = 0; i < 1000; i++)
+            for (int x = 0; x < 1000; x++)
             {
                 //Slumpa tal mellan 1 och 6
-                int tal = random.Next(1, 7);
+                int w = random.Next(1, 7);
 
                 //Lägg nyckel om denna inte redan finns
-                if (!resultat.ContainsKey(tal))
-                    resultat.Add(tal, 0);
+                if (!resultat.ContainsKey(w))
+                    resultat.Add(w, 0);
 
                 //Öka förekomsten av tal
-                resultat[tal]++;
+                resultat[w]++;
             }
 
             //Visa resultatet
